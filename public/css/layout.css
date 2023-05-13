@@ -1,0 +1,189 @@
+  .xr {
+    border: 3px dashed red;
+  }
+
+  .xb {
+    border: 3px dashed blue;
+  }
+
+  .xg {
+    border: 3px dashed green;
+  }
+
+
+/*
+    Page layout
+*/
+
+div.right-content {
+    display: grid;
+    grid-template-columns:  minmax(15%, 5%) minmax(70%, 90%) minmax(15%, 5%);
+}
+
+table.gridview {
+  width: 100%;
+}
+
+div.subheading {
+  display: flex;
+  justify-content: center;
+}
+
+div.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+
+/* 
+    Zebra stripe an HTML table.
+*/
+
+.zebra-stripe  tr:nth-child(even),
+div.data-row:nth-child(even)
+ {
+    background-color: rgba(224, 224, 224, .3); 
+}
+
+
+.zebra-stripe  tr:nth-child(odd),
+div.data-row:nth-child(odd)
+ {
+    background-color: rgba(51, 170, 51, .1); 
+}
+
+.zebra-stripe tr:first-child, .table-footer {
+    background-color: rgba(224, 224, 224, 9);
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+.zebra-stripe tr > td, .zebra-stripe tr > th, .table-footer {
+    padding: .4rem;
+}
+
+.table-footer {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.zebra-stripe tr:hover {
+    background-color: rgba(245, 255, 144, 0.93);
+}
+
+/*
+    Set column widths by column position.
+*/
+
+/*
+.zebra-stripe td:nth-child(1) {
+    width: 6rem;
+}
+
+.zebra-stripe td:nth-child(2) {
+    width: 6rem;
+}
+
+.zebra-stripe td:nth-child(3) {
+    width: 6rem;
+}
+
+.zebra-stripe td:nth-child(4) {
+    width: 6rem;
+}
+
+*/
+
+/*
+    Alternatively set widths by column CSS class names.
+*/
+.col-number {
+    width: 6rem;
+}
+
+.col-name {
+    width: auto;
+}
+
+.col-text-button {
+    width: 3rem;
+}
+
+.col-icon-button {
+    width: 2rem;
+}
+
+
+
+i {
+    color: black;
+}
+
+.form-control {
+    background-color: rgba(224, 224, 224, .5);
+}
+
+
+.customer-list-with-list-view {
+	border: 1px solid gray;
+}
+
+div.data-heading-row {
+	display:flex;	
+	background-color: #e0e0e0;
+	width: 100%;
+	padding: .7rem;
+	font-weight: 800;
+}
+
+div.data-row {
+    display:flex;
+	width: 100%;
+	padding: .3rem;
+}
+
+div.data-row:hover {
+    background-color: rgba(245, 255, 144, 0.93);
+}
+
+
+.listview-col-number {
+    width: 7%;
+}
+
+.listview-col-name {
+    width: 85%;
+}
+
+.listview-col-buttons {
+    width: 8%;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+.col-icon-button {
+    width: 2rem;
+}
+
+
+a {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem; 
+}
+
+a[data-title]:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: -1.7rem;
+  left: -2rem;
+  padding: .1rem .4rem;
+  border-radius: 5px;
+}
